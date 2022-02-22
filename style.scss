@@ -1,0 +1,206 @@
+*,
+::before,
+::after {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+button {
+    background: none;
+    border: none;
+    outline: none;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+// variables
+$ff--primary: 'Roboto', sans-serif;
+$ff--secondary: 'Open Sans', sans-serif;
+
+$clr--dark: #21325E;
+$clr--navy: #3E497A;
+$clr--yellow: #F1D00A;
+$clr--white: #F0F0F0;
+
+body {
+    font-family: $ff--secondary;
+    font-size: 0.875rem;
+    background-color: $clr--white;
+    color: $clr--dark;
+    line-height: 1.5;
+    letter-spacing: .1rem;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    font-family: $ff--primary;
+    color: $clr--navy;
+    line-height: 1.25;
+    letter-spacing: .1rem;
+    margin-bottom: 0.75rem;
+    text-transform: capitalize;
+}
+
+h1 {
+    font-size: 3rem;
+}
+h2 {
+    font-size: 2rem;
+}
+h3 {
+    font-size: 1rem;
+    margin: 0;
+}
+h4 {
+    font-size: 0.875rem;
+}
+
+p {
+    margin-bottom: 1.25rem;
+}
+
+@media (min-width: 768px) {
+
+    body {
+        font-size: 1rem;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4 {
+        line-height: 1;
+    }
+
+    h1 {
+        font-size: 4rem;
+    }
+    h2 {
+        font-size: 3rem;
+    }
+    h3 {
+        font-size: 1.75rem;
+    }
+    h4 {
+        font-size: 1rem;
+    }
+
+}
+
+// Global Access
+
+// header
+
+header {
+    background-color: $clr--yellow;
+    /* max-width: 1440px;
+    margin: 0 auto; */
+}
+
+.header-center {
+    padding: 1rem 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.sidebar-toggle {
+    color: $clr--dark;
+}
+
+// sidebar
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: $clr--navy;
+    display: flex;
+    flex-direction: column;
+    transform: translateX(-100%);
+    transition: all 0.4s ease;
+}
+
+// show sidebar
+.show-sidebar {
+    transform: translateX(0)
+}
+
+.sidebar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: $clr--dark;
+    padding: 1rem 1.5rem;
+    box-shadow: 0px 0px 3px #222;
+}
+
+.sidebar h3 {
+    color: $clr--yellow;
+}
+
+.close-btn i {
+    color: #FC4F4F;
+    font-size: 1rem;
+}
+
+// nav
+.links a {
+    display: block;
+    color: #EEEEEE;
+    padding: .5rem 1.5rem;
+}
+
+.links a:hover {
+    background-color: $clr--dark;
+    color: $clr--yellow;
+    padding-left: 2rem;
+}
+
+// icon-container
+.icon-container {
+    margin-top: auto;
+    padding: 1rem 0;
+}
+
+.social-links {
+    display: flex;
+    justify-content: space-between;
+    max-width: 125px;
+    margin: 0 auto;
+    font-size: 1.5rem;
+}
+
+// icons
+.fa-facebook-square {
+    color: #3b5998;
+}
+.fa-twitter-square {
+    color: #00acee;
+}
+.fa-instagram-square {
+    color: #8a3ab9;
+}
+.fa-youtube {
+    color: #FF0000;
+}
+
+@media (min-width: 768px) { 
+
+    .sidebar {
+        max-width: 400px;
+    }
+
+}
